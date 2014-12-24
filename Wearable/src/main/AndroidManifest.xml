@@ -47,7 +47,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_analog" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_analog_circular" />
             <meta-data
                     android:name="com.google.android.wearable.watchface.companionConfigurationAction"
@@ -71,7 +71,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_analog" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_analog_circular" />
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
@@ -92,7 +92,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_tilt" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_tilt_circular" />
             <meta-data
                     android:name="com.google.android.wearable.watchface.companionConfigurationAction"
@@ -117,7 +117,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_card_bounds" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_card_bounds_circular" />
             <meta-data
                     android:name="com.google.android.wearable.watchface.companionConfigurationAction"
@@ -141,7 +141,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_digital" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_digital_circular" />
             <meta-data
                     android:name="com.google.android.wearable.watchface.companionConfigurationAction"
@@ -182,7 +182,7 @@
                     android:name="com.google.android.wearable.watchface.preview"
                     android:resource="@drawable/preview_calendar" />
             <meta-data
-                    android:name="com.google.android.clockwork.home.preview_circular"
+                    android:name="com.google.android.wearable.watchface.preview_circular"
                     android:resource="@drawable/preview_calendar_circular" />
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
