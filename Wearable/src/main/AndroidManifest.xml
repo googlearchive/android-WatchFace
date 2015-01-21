@@ -37,8 +37,6 @@
         <service
                 android:name=".AnalogWatchFaceService"
                 android:label="@string/analog_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
@@ -61,8 +59,6 @@
         <service
                 android:name=".SweepWatchFaceService"
                 android:label="@string/sweep_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
@@ -82,8 +78,6 @@
         <service
                 android:name=".TiltWatchFaceService"
                 android:label="@string/tilt_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
@@ -107,8 +101,6 @@
         <service
                 android:name=".CardBoundsWatchFaceService"
                 android:label="@string/card_bounds_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
@@ -131,8 +123,6 @@
         <service
                 android:name=".DigitalWatchFaceService"
                 android:label="@string/digital_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
@@ -172,8 +162,6 @@
         <service
                 android:name=".CalendarWatchFaceService"
                 android:label="@string/calendar_name"
-                android:allowEmbedded="true"
-                android:taskAffinity=""
                 android:permission="android.permission.BIND_WALLPAPER" >
             <meta-data
                     android:name="android.service.wallpaper"
