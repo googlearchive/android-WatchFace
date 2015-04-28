@@ -9,8 +9,8 @@ includes a phone-side configuration example.
 Pre-requisites
 --------------
 
-- Android SDK v21
-- Android Build Tools v21.1.2
+- Android SDK v22
+- Android Build Tools v22.0.1
 - Android Support Repository
 
 Getting Started
