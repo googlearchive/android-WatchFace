@@ -4,14 +4,19 @@ Android WatchFace Sample
 
 This sample demonstrates how to create watch faces for android wear and includes a phone app
 and a wearable app. The wearable app has a variety of watch faces including analog, digital,
-opengl, calendar, interactive, etc. It also includes a watch-side configuration example.
+opengl, calendar, steps, interactive, etc. It also includes a watch-side configuration example.
 The phone app includes a phone-side configuration example.
+
+Additional note on Steps WatchFace Sample, if the user has not installed or setup the Google Fit app
+on their phone and their Wear device has not configured the Google Fit Wear App, then you may get
+zero steps until one of the two is setup. Please note, many Wear devices configure the Google Fit
+Wear App beforehand.
 
 Pre-requisites
 --------------
 
 - Android SDK v23
-- Android Build Tools v23.0.1
+- Android Build Tools v23.0.2
 - Android Support Repository
 
 Getting Started
