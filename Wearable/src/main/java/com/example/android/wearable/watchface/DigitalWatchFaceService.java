@@ -200,12 +200,12 @@ public class DigitalWatchFaceService extends CanvasWatchFaceService {
 
             mBackgroundPaint = new Paint();
             mBackgroundPaint.setColor(mInteractiveBackgroundColor);
-            mDatePaint = createTextPaint(resources.getColor(R.color.digital_date));
+            mDatePaint = createTextPaint(ContextCompat.getColor(getApplicationContext(), R.color.digital_date));
             mHourPaint = createTextPaint(mInteractiveHourDigitsColor, BOLD_TYPEFACE);
             mMinutePaint = createTextPaint(mInteractiveMinuteDigitsColor);
             mSecondPaint = createTextPaint(mInteractiveSecondDigitsColor);
-            mAmPmPaint = createTextPaint(resources.getColor(R.color.digital_am_pm));
-            mColonPaint = createTextPaint(resources.getColor(R.color.digital_colons));
+            mAmPmPaint = createTextPaint(ContextCompat.getColor(getApplicationContext(),R.color.digital_am_pm));
+            mColonPaint = createTextPaint(ContextCompat.getColor(getApplicationContext(),R.color.digital_colons));
 
             mCalendar = Calendar.getInstance();
             mDate = new Date();
