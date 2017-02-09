@@ -15,14 +15,16 @@ apply plugin: 'com.android.application'
 
 dependencies {
 
-    compile 'com.android.support:palette-v7:24.1.1'
+    compile 'com.android.support:palette-v7:25.1.0'
     compile 'com.google.android.gms:play-services-fitness:10.0.1'
 
 
     compile 'com.google.android.gms:play-services-wearable:10.0.1'
     compile 'com.android.support:support-v13:25.0.1'
 
-    compile 'com.google.android.support:wearable:2.0.0-alpha3'
+    provided 'com.google.android.wearable:wearable:2.0.0'
+
+    compile 'com.google.android.support:wearable:2.0.0'
 
 }
 
@@ -43,9 +45,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        minSdkVersion 18
+        minSdkVersion 22
 
-        targetSdkVersion 23
+        targetSdkVersion 25
     }
 
     compileOptions {
