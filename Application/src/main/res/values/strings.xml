@@ -14,15 +14,13 @@
  limitations under the License.
 -->
 <resources>
-    <string name="analog_config_text">This is the config activity for the Analog and Card Bounds watch faces</string>
     <string name="digital_config_text">Digital watch face configuration</string>
-    <string name="opengl_config_text">OpenGL watch face configuration</string>
     <string name="digital_config_background">Background</string>
     <string name="digital_config_hours">Hours</string>
     <string name="digital_config_minutes">Minutes</string>
     <string name="digital_config_seconds">Seconds</string>
 
-    <string name="fit_config_switch_text">Google Fit</string>
+    <string name="opengl_config_text">OpenGL watch face configuration</string>
 
     <string name="title_no_device_connected">No wearable device is currently connected.</string>
     <string name="ok_no_device_connected">OK</string>
