@@ -23,7 +23,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.support.wearable.view.BoxInsetLayout;
+import android.support.wear.widget.BoxInsetLayout;
 import android.support.wearable.view.CircledImageView;
 import android.support.wearable.view.WearableListView;
 import android.util.Log;

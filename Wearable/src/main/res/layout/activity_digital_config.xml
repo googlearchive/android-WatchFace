@@ -13,7 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/content"
     android:layout_width="match_parent"
@@ -29,11 +30,11 @@
         android:textColor="@color/config_activity_header_text_color"
         android:text="@string/digital_background_color"
         android:fontFamily="sans-serif-condensed-light"
-        app:layout_box="left|top"/>
+        app:boxedEdges="left|top"/>
     <android.support.wearable.view.WearableListView
         android:id="@+id/color_picker"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
-        app:layout_box="left|right"/>
-</android.support.wearable.view.BoxInsetLayout>
+        app:boxedEdges="left|right"/>
+</android.support.wear.widget.BoxInsetLayout>

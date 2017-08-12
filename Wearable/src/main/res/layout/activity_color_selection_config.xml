@@ -23,9 +23,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context="com.example.android.wearable.watchface.config.ColorSelectionActivity">
-    <android.support.wearable.view.WearableRecyclerView
+    <android.support.wear.widget.WearableRecyclerView
         android:id="@+id/wearable_recycler_view"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-    </android.support.wearable.view.WearableRecyclerView>
+        android:layout_width="match_parent" />
 </FrameLayout>
