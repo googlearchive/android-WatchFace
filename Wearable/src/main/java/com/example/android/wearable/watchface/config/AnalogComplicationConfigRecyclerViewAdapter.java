@@ -518,24 +518,28 @@ public class AnalogComplicationConfigRecyclerViewAdapter
                 }
 
             } else if (watchFaceComplicationId == mLeftComplicationId) {
-                if (complicationProviderInfo != null) {
-                    mLeftComplication.setImageIcon(complicationProviderInfo.providerIcon);
-                    mLeftComplicationBackground.setVisibility(View.VISIBLE);
-
-                } else {
-                    mLeftComplication.setImageDrawable(mDefaultComplicationDrawable);
-                    mLeftComplicationBackground.setVisibility(View.INVISIBLE);
-                }
+                updateComplicationView(complicationProviderInfo, mLeftComplication,
+                    mLeftComplicationBackground);
 
             } else if (watchFaceComplicationId == mRightComplicationId) {
-                if (complicationProviderInfo != null) {
-                    mRightComplication.setImageIcon(complicationProviderInfo.providerIcon);
-                    mRightComplicationBackground.setVisibility(View.VISIBLE);
+                updateComplicationView(complicationProviderInfo, mRightComplication,
+                    mRightComplicationBackground);
+            }
+        }
 
-                } else {
-                    mRightComplication.setImageDrawable(mDefaultComplicationDrawable);
-                    mRightComplicationBackground.setVisibility(View.INVISIBLE);
-                }
+        private void updateComplicationView(ComplicationProviderInfo complicationProviderInfo,
+            ImageButton button, ImageView background) {
+            if (complicationProviderInfo != null) {
+                button.setImageIcon(complicationProviderInfo.providerIcon);
+                button.setContentDescription(
+                    mContext.getString(R.string.edit_complication,
+                        complicationProviderInfo.appName + " " +
+                            complicationProviderInfo.providerName));
+                background.setVisibility(View.VISIBLE);
+            } else {
+                button.setImageDrawable(mDefaultComplicationDrawable);
+                button.setContentDescription(mContext.getString(R.string.add_complication));
+                background.setVisibility(View.INVISIBLE);
             }
         }
 
