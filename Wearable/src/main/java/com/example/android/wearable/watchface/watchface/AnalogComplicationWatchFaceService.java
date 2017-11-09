@@ -413,91 +413,19 @@ public class AnalogComplicationWatchFaceService extends CanvasWatchFaceService {
             Log.d(TAG, "OnTapCommand()");
             switch (tapType) {
                 case TAP_TYPE_TAP:
-                    int tappedComplicationId = getTappedComplicationId(x, y);
-                    if (tappedComplicationId != -1) {
-                        onComplicationTap(tappedComplicationId);
+
+                    for (int i = 0; i < COMPLICATION_IDS.length; i++) {
+                        int complicationId = COMPLICATION_IDS[i];
+                        ComplicationDrawable complicationDrawable =
+                                mComplicationDrawableSparseArray.get(complicationId);
+
+                        boolean successfulTap = complicationDrawable.onTap(x, y, eventTime);
+
+                        if (successfulTap) {
+                            return;
+                        }
                     }
                     break;
-            }
-        }
-
-        /*
-         * Determines if tap inside a complication area or returns -1.
-         */
-        private int getTappedComplicationId(int x, int y) {
-            int complicationId;
-            ComplicationData complicationData;
-            ComplicationDrawable complicationDrawable;
-
-            long currentTimeMillis = System.currentTimeMillis();
-
-            for (int i = 0; i < COMPLICATION_IDS.length; i++) {
-                complicationId = COMPLICATION_IDS[i];
-                complicationData = mActiveComplicationDataSparseArray.get(complicationId);
-
-                if ((complicationData != null)
-                        && (complicationData.isActive(currentTimeMillis))
-                        // The line below this comment block disables taps for background
-                        // complications (usually not wanted by the user).
-                        // If you do want to enable this, remove the line below and reverse order
-                        // of the loop so it checks the last elements (non-background complications)
-                        // first. Otherwise, the background complication (since it is the size of
-                        // the whole watch face) will capture all taps.
-                        && (complicationData.getType() != ComplicationData.TYPE_LARGE_IMAGE)
-                        && (complicationData.getType() != ComplicationData.TYPE_NOT_CONFIGURED)
-                        && (complicationData.getType() != ComplicationData.TYPE_EMPTY)) {
-
-                    complicationDrawable = mComplicationDrawableSparseArray.get(complicationId);
-                    Rect complicationBoundingRect = complicationDrawable.getBounds();
-
-                    if (complicationBoundingRect.width() > 0) {
-                        if (complicationBoundingRect.contains(x, y)) {
-                            return complicationId;
-                        }
-                    } else {
-                        Log.e(TAG, "Not a recognized complication id.");
-                    }
-                }
-            }
-            return -1;
-        }
-
-        /*
-         * Fires PendingIntent associated with complication (if it has one).
-         */
-        private void onComplicationTap(int complicationId) {
-            Log.d(TAG, "onComplicationTap()");
-
-            ComplicationData complicationData =
-                    mActiveComplicationDataSparseArray.get(complicationId);
-
-            if (complicationData != null) {
-
-                if (complicationData.getTapAction() != null) {
-                    try {
-                        complicationData.getTapAction().send();
-                    } catch (PendingIntent.CanceledException e) {
-                        Log.e(TAG, "On complication tap action error " + e);
-                    }
-
-                } else if (complicationData.getType() == ComplicationData.TYPE_NO_PERMISSION) {
-
-                    // Watch face does not have permission to receive complication data, so launch
-                    // permission request.
-                    ComponentName componentName =
-                            new ComponentName(
-                                    getApplicationContext(),
-                                    AnalogComplicationWatchFaceService.class);
-
-                    Intent permissionRequestIntent =
-                            ComplicationHelperActivity.createPermissionRequestHelperIntent(
-                                    getApplicationContext(), componentName);
-
-                    startActivity(permissionRequestIntent);
-                }
-
-            } else {
-                Log.d(TAG, "No PendingIntent for complication " + complicationId + ".");
             }
         }
 

@@ -1,11 +1,14 @@
 
 buildscript {
     repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
     }
 }
 
@@ -22,16 +25,16 @@ repositories {
 
 dependencies {
 
-    compile 'com.android.support:palette-v7:26.0.0'
-    compile 'com.android.support:wear:26.0.0'
+    compile 'com.android.support:palette-v7:27.0.0'
+    compile 'com.android.support:wear:27.0.0'
 
 
-    compile 'com.google.android.gms:play-services-wearable:11.4.0'
-    compile 'com.android.support:support-v13:26.1.0'
+    compile 'com.google.android.gms:play-services-wearable:11.6.0'
+    compile 'com.android.support:support-v13:27.0.0'
 
-    provided 'com.google.android.wearable:wearable:2.0.5'
+    provided 'com.google.android.wearable:wearable:2.1.0'
 
-    compile 'com.google.android.support:wearable:2.0.5'
+    compile 'com.google.android.support:wearable:2.1.0'
 
 }
 
@@ -45,9 +48,9 @@ List<String> dirs = [
 
 android {
 
-        compileSdkVersion 26
+        compileSdkVersion 27
 
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         versionCode 1
@@ -55,8 +58,9 @@ android {
 
         minSdkVersion 24
 
-        targetSdkVersion 26
+        targetSdkVersion 27
 
+        multiDexEnabled true
 
     }
 
