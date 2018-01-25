@@ -16,9 +16,7 @@
 
 package com.example.android.wearable.watchface.watchface;
 
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -31,7 +29,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.wearable.complications.ComplicationData;
-import android.support.wearable.complications.ComplicationHelperActivity;
 import android.support.wearable.complications.rendering.ComplicationDrawable;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceService;
@@ -39,10 +36,8 @@ import android.support.wearable.watchface.WatchFaceStyle;
 import android.util.Log;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
-
 import com.example.android.wearable.watchface.R;
 import com.example.android.wearable.watchface.config.AnalogComplicationConfigRecyclerViewAdapter;
-
 import java.util.Calendar;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
@@ -231,6 +226,7 @@ public class AnalogComplicationWatchFaceService extends CanvasWatchFaceService {
             setWatchFaceStyle(
                     new WatchFaceStyle.Builder(AnalogComplicationWatchFaceService.this)
                             .setAcceptsTapEvents(true)
+                            .setHideNotificationIndicator(true)
                             .build());
 
             loadSavedPreferences();
@@ -414,12 +410,15 @@ public class AnalogComplicationWatchFaceService extends CanvasWatchFaceService {
             switch (tapType) {
                 case TAP_TYPE_TAP:
 
-                    for (int i = 0; i < COMPLICATION_IDS.length; i++) {
+                    // If your background complication is the first item in your array, you need
+                    // to walk backward through the array to make sure the tap isn't for a
+                    // complication above the background complication.
+                    for (int i = COMPLICATION_IDS.length - 1; i >= 0; i--) {
                         int complicationId = COMPLICATION_IDS[i];
                         ComplicationDrawable complicationDrawable =
                                 mComplicationDrawableSparseArray.get(complicationId);
 
-                        boolean successfulTap = complicationDrawable.onTap(x, y, eventTime);
+                        boolean successfulTap = complicationDrawable.onTap(x, y);
 
                         if (successfulTap) {
                             return;
