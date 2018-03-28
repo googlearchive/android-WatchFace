@@ -7,7 +7,7 @@ A simple sample that demonstrates watch faces and complications for Wear 2.0.
 Introduction
 ------------
 
-This sample demonstrates how to create watch faces for Android Wear.
+This sample demonstrates how to create watch faces for Wear.
 
 The analog watch face covers best practices for Wear 2.0 including complications and a new
 configuration Activity for configuring both the watch face styles and the complications themselves.
@@ -47,7 +47,7 @@ Pre-requisites
 --------------
 
 - Android SDK 27
-- Android Build Tools v27.0.2
+- Android Build Tools v27.0.3
 - Android Support Repository
 
 Screenshots

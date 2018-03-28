@@ -203,7 +203,7 @@
             If you do decide to use UPDATE_PERIOD_SECONDS, set the interval in the order of minutes.
             A good value might be 600 seconds (10 minutes) if you need updates pulled often.
 
-            Also, remember that this is only a guidance for the system. Android Wear may update less
+            Also, remember that this is only a guidance for the system. Wear may update less
             frequently.
             -->
             <meta-data
