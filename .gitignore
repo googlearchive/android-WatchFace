@@ -1,0 +1,10 @@
+Application/release
+build
+local.properties
+*.iml
+*.jks
+*.keyring
+.DS_Store
+.gradle
+.idea/*
+.idea
