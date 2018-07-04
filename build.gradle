@@ -1,9 +1,14 @@
-
-
-
-
-
-
+buildscript {
+    ext.vGradle = '3.0.1'  // todo: breaks everything if not 3.0.1
+    ext.vWearable = '2.3.0'
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$vGradle"
+    }
+}
 
 
 
