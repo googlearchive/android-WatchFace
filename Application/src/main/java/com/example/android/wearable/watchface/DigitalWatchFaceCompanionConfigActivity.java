@@ -46,7 +46,7 @@ import com.google.android.gms.wearable.Wearable;
  */
 public class DigitalWatchFaceCompanionConfigActivity extends Activity
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
-                ResultCallback<DataApi.DataItemResult> {
+                   ResultCallback<DataApi.DataItemResult> {
     private static final String TAG = "DigitalWatchFaceConfig";
 
     // TODO: use the shared constants (needs covering all the samples with Gradle build model)
@@ -73,7 +73,7 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
 
         ComponentName name = getIntent().getParcelableExtra(
                 WatchFaceCompanion.EXTRA_WATCH_FACE_COMPONENT);
-        TextView label = (TextView)findViewById(R.id.label);
+        TextView label = (TextView) findViewById(R.id.label);
         label.setText(label.getText() + " (" + name.getClassName() + ")");
     }
 
@@ -152,7 +152,7 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
      * item selection listeners.
      *
      * @param config the {@code DigitalWatchFaceService} config {@link DataMap}. If null, the
-     *         default items are selected.
+     *               default items are selected.
      */
     private void setUpAllPickers(DataMap config) {
         setUpColorPickerSelection(R.id.background, KEY_BACKGROUND_COLOR, config,
@@ -168,7 +168,7 @@ public class DigitalWatchFaceCompanionConfigActivity extends Activity
     }
 
     private void setUpColorPickerSelection(int spinnerId, final String configKey, DataMap config,
-            int defaultColorNameResId) {
+                                           int defaultColorNameResId) {
         String defaultColorName = getString(defaultColorNameResId);
         int defaultColor = Color.parseColor(defaultColorName);
         int color;

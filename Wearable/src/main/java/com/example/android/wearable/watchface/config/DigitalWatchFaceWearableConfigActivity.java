@@ -33,21 +33,21 @@ import android.view.WindowInsets;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.android.wearable.watchface.R;
+import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
+import com.example.android.wearable.watchface.watchface.DigitalWatchFaceService;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.Wearable;
-
-import com.example.android.wearable.watchface.watchface.DigitalWatchFaceService;
-import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
-import com.example.android.wearable.watchface.R;
 
 /**
  * The watch-side config activity for {@link DigitalWatchFaceService}, which allows for setting the
  * background color.
  */
 public class DigitalWatchFaceWearableConfigActivity extends Activity implements
-        WearableListView.ClickListener, WearableListView.OnScrollListener {
+                                                                     WearableListView.ClickListener,
+                                                                     WearableListView.OnScrollListener {
     private static final String TAG = "DigitalWatchFaceConfig";
 
     private GoogleApiClient mGoogleApiClient;
@@ -197,12 +197,18 @@ public class DigitalWatchFaceWearableConfigActivity extends Activity implements
         }
     }
 
-    /** The layout of a color item including image and label. */
+    /**
+     * The layout of a color item including image and label.
+     */
     private static class ColorItem extends LinearLayout implements
-            WearableListView.OnCenterProximityListener {
-        /** The duration of the expand/shrink animation. */
+                                                        WearableListView.OnCenterProximityListener {
+        /**
+         * The duration of the expand/shrink animation.
+         */
         private static final int ANIMATION_DURATION_MS = 150;
-        /** The ratio for the size of a circle in shrink state. */
+        /**
+         * The ratio for the size of a circle in shrink state.
+         */
         private static final float SHRINK_CIRCLE_RATIO = .75f;
 
         private static final float SHRINK_LABEL_ALPHA = .5f;
