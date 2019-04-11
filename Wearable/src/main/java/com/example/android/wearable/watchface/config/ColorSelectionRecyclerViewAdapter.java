@@ -18,12 +18,13 @@ package com.example.android.wearable.watchface.config;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.widget.RecyclerView;
 import android.support.wearable.view.CircledImageView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.wearable.watchface.R;
 

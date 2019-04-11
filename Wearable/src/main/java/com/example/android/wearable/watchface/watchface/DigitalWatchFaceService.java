@@ -28,7 +28,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.content.ContextCompat;
 import android.support.wearable.watchface.CanvasWatchFaceService;
 import android.support.wearable.watchface.WatchFaceService;
 import android.support.wearable.watchface.WatchFaceStyle;
@@ -37,6 +36,10 @@ import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.WindowInsets;
 
+import androidx.core.content.ContextCompat;
+
+import com.example.android.wearable.watchface.R;
+import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataApi;
@@ -46,9 +49,6 @@ import com.google.android.gms.wearable.DataItem;
 import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.Wearable;
-
-import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
-import com.example.android.wearable.watchface.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

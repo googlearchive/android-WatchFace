@@ -26,6 +26,7 @@
     <string name="digital_am">AM</string>
     <string name="digital_pm">PM</string>
 
+    <string name="analog_complication_config_name">Configuration</string>
     <string name="complications_provider_incrementing_number">Incrementing Number</string>
 
     <string name="analog_complication_preference_file_key">com.example.android.wearable.watchface.ANALOG_COMPLICATION_PREFERENCE_FILE_KEY</string>
@@ -47,8 +48,7 @@
     <string name="color_navy">Navy</string>
     <string name="color_red">Red</string>
     <string name="color_white">White</string>
-
-    <string name="analog_complication_config">Configure Watchface Complications</string>
+    <string name="analog_complication_config">Analog Complication Config</string>
     <string name="add_complication">Add Complication</string>
     <string name="edit_complication">Edit Complication <xliff:g id="name" example="World Clock">%1$s</xliff:g></string>
 

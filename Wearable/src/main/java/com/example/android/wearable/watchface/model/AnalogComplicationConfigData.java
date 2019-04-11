@@ -17,13 +17,14 @@ package com.example.android.wearable.watchface.model;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.v7.widget.RecyclerView.ViewHolder;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.example.android.wearable.watchface.R;
+import com.example.android.wearable.watchface.config.AnalogComplicationConfigActivity;
 import com.example.android.wearable.watchface.config.AnalogComplicationConfigRecyclerViewAdapter;
 import com.example.android.wearable.watchface.config.ColorSelectionActivity;
-import com.example.android.wearable.watchface.config.AnalogComplicationConfigActivity;
 import com.example.android.wearable.watchface.watchface.AnalogComplicationWatchFaceService;
 
 import java.util.ArrayList;

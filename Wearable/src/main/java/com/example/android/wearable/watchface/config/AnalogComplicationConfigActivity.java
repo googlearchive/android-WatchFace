@@ -18,11 +18,12 @@ package com.example.android.wearable.watchface.config;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.wear.widget.WearableRecyclerView;
 import android.support.wearable.complications.ComplicationProviderInfo;
 import android.support.wearable.complications.ProviderChooserIntent;
 import android.util.Log;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.wear.widget.WearableRecyclerView;
 
 import com.example.android.wearable.watchface.R;
 import com.example.android.wearable.watchface.model.AnalogComplicationConfigData;

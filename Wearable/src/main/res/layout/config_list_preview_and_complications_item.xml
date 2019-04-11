@@ -31,8 +31,7 @@ based on changes by the user.
         android:layout_height="@dimen/analog_complication_settings_preview_size"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/settings_watch_face_preview_background"
-        android:importantForAccessibility="no"/>
+        android:background="@drawable/settings_watch_face_preview_background"/>
 
     <View
         android:id="@+id/watch_face_highlight"
@@ -40,8 +39,7 @@ based on changes by the user.
         android:layout_height="@dimen/analog_complication_settings_preview_size"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/settings_watch_face_preview_highlight"
-        android:importantForAccessibility="no"/>
+        android:background="@drawable/settings_watch_face_preview_highlight"/>
 
 
     <View
@@ -50,8 +48,7 @@ based on changes by the user.
         android:layout_height="@dimen/analog_complication_settings_preview_size"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/settings_watch_face_preview_arms_and_ticks"
-        android:importantForAccessibility="no"/>
+        android:background="@drawable/settings_watch_face_preview_arms_and_ticks"/>
 
 
     <ImageView
@@ -62,8 +59,7 @@ based on changes by the user.
         android:layout_centerVertical="true"
         android:src="@drawable/added_complication"
         style="?android:borderlessButtonStyle"
-        android:background="@android:color/transparent"
-        android:importantForAccessibility="no" />
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/left_complication"
@@ -82,8 +78,7 @@ based on changes by the user.
         android:layout_centerVertical="true"
         android:src="@drawable/added_complication"
         style="?android:borderlessButtonStyle"
-        android:background="@android:color/transparent"
-        android:importantForAccessibility="no"/>
+        android:background="@android:color/transparent"/>
 
     <ImageButton
         android:id="@+id/right_complication"

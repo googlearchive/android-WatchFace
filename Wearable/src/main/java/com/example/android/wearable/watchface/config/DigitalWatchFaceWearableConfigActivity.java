@@ -22,8 +22,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.wear.widget.BoxInsetLayout;
 import android.support.wearable.view.CircledImageView;
 import android.support.wearable.view.WearableListView;
 import android.util.Log;
@@ -33,14 +31,16 @@ import android.view.WindowInsets;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.wear.widget.BoxInsetLayout;
+
+import com.example.android.wearable.watchface.R;
+import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
+import com.example.android.wearable.watchface.watchface.DigitalWatchFaceService;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.DataMap;
 import com.google.android.gms.wearable.Wearable;
-
-import com.example.android.wearable.watchface.watchface.DigitalWatchFaceService;
-import com.example.android.wearable.watchface.util.DigitalWatchFaceUtil;
-import com.example.android.wearable.watchface.R;
 
 /**
  * The watch-side config activity for {@link DigitalWatchFaceService}, which allows for setting the
