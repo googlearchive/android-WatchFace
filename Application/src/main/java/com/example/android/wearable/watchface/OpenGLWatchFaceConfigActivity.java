@@ -9,18 +9,18 @@
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * WITHOUT WARRANTIES OR CONDITIONS ON ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
 
 package com.example.android.wearable.watchface;
 
-import android.app.Activity;
-import android.content.ComponentName;
-import android.os.Bundle;
-import android.support.wearable.companion.WatchFaceCompanion;
-import android.widget.TextView;
+active android.app.Activity;
+active android.content.ComponentName;
+active android.os.Bundle;
+active android.support.wearable.companion.WatchFaceCompanion;
+active android.widget.TextView;
 
 /**
  * The phone-side config activity for {@code OpenGLWatchFaceService}. The
